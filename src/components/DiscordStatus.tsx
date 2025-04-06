@@ -56,7 +56,6 @@ enum PremiumType {
 
 export default function DiscordStatus() {
   const [discordData, setDiscordData] = useState<LanyardData['data'] | null>(null);
-  const [loading, setLoading] = useState(true);
   const [elapsedTime, setElapsedTime] = useState<string>('');
 
   useEffect(() => {
@@ -78,8 +77,6 @@ export default function DiscordStatus() {
         }
       } catch (error) {
         console.error('Error fetching Discord status:', error);
-      } finally {
-        setLoading(false);
       }
     };
 
