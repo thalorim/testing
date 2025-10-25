@@ -98,7 +98,6 @@ const Header = ({ isScrolled = false }: HeaderProps) => {
   const navLinks = [
     { href: '#about', label: 'About', id: 'about' },
     { href: '#skills', label: 'Skills', id: 'skills' },
-    { href: '#projects', label: 'Projects', id: 'projects' },
     { href: '#contact', label: 'Contact', id: 'contact' },
   ];
 
