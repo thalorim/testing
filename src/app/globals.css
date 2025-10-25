@@ -134,6 +134,16 @@ input[type="reset"],
   }
 }
 
+/* Subtle animated gradient for dark backgrounds */
+@keyframes gradient-pan-slow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -269,5 +279,17 @@ html {
 
   .shine:hover::before {
     left: 150%;
+  }
+
+  /* Animated dark gradient background utility */
+  .animated-gradient-dark {
+    /* Base dark tone with soft colored glows */
+    background-color: #0a0a0a;
+    background-image:
+      radial-gradient(800px 400px at 10% 20%, rgba(99, 102, 241, 0.16), transparent 60%),
+      radial-gradient(700px 350px at 85% 30%, rgba(217, 70, 239, 0.14), transparent 60%),
+      radial-gradient(600px 300px at 30% 85%, rgba(139, 92, 246, 0.12), transparent 60%);
+    background-size: 200% 200%;
+    animation: gradient-pan-slow 18s ease-in-out infinite alternate;
   }
 }
